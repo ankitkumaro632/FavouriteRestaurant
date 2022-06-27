@@ -12,6 +12,5 @@ public interface RestaurantService {
     /* find the restaurant details by name */
     RestaurantDto findByName(String name);
 
-    /* find the collection of player and restaurant by player name */
-    List<RestaurantDto> getRestaurantAndPlayerDetails(String firstName);
+
 }

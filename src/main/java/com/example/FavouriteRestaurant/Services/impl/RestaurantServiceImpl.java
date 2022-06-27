@@ -11,9 +11,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Service
 public class RestaurantServiceImpl implements RestaurantService {
     @Autowired
@@ -39,21 +36,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         Restaurant restaurant = this.restaurantRepo.findByName(name);
         return this.restaurantToDto(restaurant);
     }
-
-    /* get restaurant and player details by player name  */
-    @Override
-    public List<RestaurantDto> getRestaurantAndPlayerDetails(String firstName) {
-
-        Player player = this.playerRepo.findByFirstName(firstName);
-
-        List<Restaurant> restaurants = this.restaurantRepo.findByPlayerFirstName(firstName);
-
-        List<RestaurantDto> restaurantDto = restaurants.stream().map((restaurant) -> this.modelMapper
-                        .map(restaurant, RestaurantDto.class )).collect((Collectors.toList()));
-
-        return restaurantDto;
-    }
-
 
     /*change the restaurant to dto and dto to restaurant data by the method */
     private Restaurant dtoToRestaurant(RestaurantDto restaurantDto){

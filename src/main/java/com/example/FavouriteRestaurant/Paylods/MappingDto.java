@@ -7,13 +7,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RestaurantDto {
-    private Long restaurant_id;
+public class MappingDto {
 
-    private String name;
+    private PlayerDto player;
 
-    private String contact_number;
-
-    private String hoursOfOperation;
-
+    private RestaurantDto restaurant;
 }

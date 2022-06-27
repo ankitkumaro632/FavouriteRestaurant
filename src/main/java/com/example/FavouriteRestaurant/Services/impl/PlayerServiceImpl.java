@@ -41,20 +41,12 @@ public class PlayerServiceImpl implements PlayerService {
         return this.playerToDto(player);
     }
 
-    /*find all player above age by restaurant name and age */
-    @Override
-    public List<PlayerDto> getAllPlayerByRestaurantName(String name, int age) {
-
-        Restaurant restaurant = this.restaurantRepo.findByName(name);
-        List<Player> players = this.playerRepo.findByRestaurantNameAndAgeGreaterThanEqual(name, age);
-
-        List<PlayerDto> playerDtos = players.stream().map((player)-> this.modelMapper
-                .map(player,PlayerDto.class)).collect(Collectors.toList());
-        return playerDtos;
-    }
 
 
     /* create a method to change player to dto and dto to player */
+
+
+
     private Player dtoToPlayer(PlayerDto playerDto){
         Player player = this.modelMapper.map(playerDto,Player.class);
         return player;

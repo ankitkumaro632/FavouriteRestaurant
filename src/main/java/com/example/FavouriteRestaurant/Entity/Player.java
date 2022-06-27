@@ -34,6 +34,6 @@ public class Player {
     @OneToMany(mappedBy = "player",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<FavouriteRestaurant> favouriteRestaurants = new ArrayList<>();
 
-    @ManyToOne
-    private Restaurant restaurant;
+    @OneToMany(mappedBy = "player",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Mapping> mapping = new ArrayList<>();
 }

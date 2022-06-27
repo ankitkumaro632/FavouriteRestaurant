@@ -15,8 +15,8 @@ public interface PlayerRepo extends JpaRepository<Player,Long> {
     /*find player and favourite restaurant collection by player name */
     Player findByFirstName(String firstName);
 
-    /* find all player above 60 by restaurant name */
-    List<Player> findByRestaurantNameAndAgeGreaterThanEqual(String name,int age);
+    /* find the age */
+    List<Player> findByAgeGreaterThanEqual(int age);
 
 
 

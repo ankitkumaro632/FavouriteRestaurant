@@ -12,7 +12,6 @@ public interface PlayerService {
    /* find the player details by player first and last name */
    PlayerDto getPlayerByName( String firstName,String lastName);
 
-   /* find the all player above 60 by restaurant name */
-   List<PlayerDto> getAllPlayerByRestaurantName(String name, int age);
+
 
 }

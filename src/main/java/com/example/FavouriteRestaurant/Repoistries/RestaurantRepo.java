@@ -11,10 +11,5 @@ public interface RestaurantRepo extends JpaRepository<Restaurant,Long> {
     /* find restaurant details by name */
     Restaurant findByName(String name);
 
-    /* find the restaurant and player collection by player name */
-/*
-    @Query("From Restaurant where player.firstName = :firstName")
-*/
-    List<Restaurant> findByPlayerFirstName(String firstName);
 
 }

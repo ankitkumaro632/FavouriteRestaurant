@@ -7,8 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/player")
 public class PlayerController {
@@ -35,20 +33,6 @@ public class PlayerController {
                                                      @PathVariable String lastName){
         try {
             return ResponseEntity.ok(this.playerService.getPlayerByName(firstName,lastName));
-        }catch (Exception e){
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
-    }
-
-    /* find the all player above 60 by restaurant name */
-    @GetMapping("/restaurant/{name}/player/{age}")
-    public ResponseEntity<List<PlayerDto>> getAllPlayerByRestaurantName(@PathVariable String name,
-                                                                  @PathVariable int age){
-        try {
-            List<PlayerDto> playerDtos = this.playerService.getAllPlayerByRestaurantName(name, age);
-            return new ResponseEntity<List<PlayerDto>>(playerDtos,HttpStatus.OK);
-
         }catch (Exception e){
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

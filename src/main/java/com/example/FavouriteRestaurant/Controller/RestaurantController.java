@@ -39,16 +39,4 @@ public class RestaurantController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-
-    /* get favourite restaurant by player name */
-    @GetMapping("/player/{firstName}/get")
-    public ResponseEntity<List<RestaurantDto>> getRestaurantByPlayer(@PathVariable String firstName){
-        try {
-            List<RestaurantDto> restaurantDtos = this.restaurantService.getRestaurantAndPlayerDetails(firstName);
-            return new ResponseEntity<List<RestaurantDto>>(restaurantDtos,HttpStatus.OK);
-        } catch (Exception e){
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
-    }
 }
