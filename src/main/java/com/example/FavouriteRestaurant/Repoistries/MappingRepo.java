@@ -1,11 +1,12 @@
 package com.example.FavouriteRestaurant.Repoistries;
 
 import com.example.FavouriteRestaurant.Entity.Mapping;
-import com.example.FavouriteRestaurant.Entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface MappingRepo extends JpaRepository<Mapping,Long> {
 
     /* find the restaurant and player mapping */

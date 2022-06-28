@@ -22,6 +22,13 @@ public class RestaurantDto {
     private String r_state;
     private String r_country;
 
-    private String hoursOfOperation;
+    private String mondayTiming;
+    private String tuesdayTiming;
+    private String wednesdayTiming;
+    private String thursdayTiming;
+    private String fridayTiming;
+    private String saturdayTiming;
+    private String sundayTiming;
+
 
 }
