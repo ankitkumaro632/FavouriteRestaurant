@@ -1,8 +1,6 @@
 package com.example.FavouriteRestaurant.Services.impl;
 
-import com.example.FavouriteRestaurant.Entity.Player;
 import com.example.FavouriteRestaurant.Entity.Restaurant;
-import com.example.FavouriteRestaurant.Paylods.FavouriteDto;
 import com.example.FavouriteRestaurant.Paylods.RestaurantDto;
 import com.example.FavouriteRestaurant.Repoistries.PlayerRepo;
 import com.example.FavouriteRestaurant.Repoistries.RestaurantRepo;

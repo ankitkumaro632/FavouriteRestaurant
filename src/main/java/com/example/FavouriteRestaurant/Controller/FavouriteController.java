@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,7 +19,7 @@ public class FavouriteController {
 
     /*save favourite restaurant details */
     @PostMapping("/player/{player_id}/restaurant/{restaurant_id}/add")
-    public ResponseEntity<FavouriteDto> create(@RequestBody FavouriteDto favouriteDto,
+    public ResponseEntity<FavouriteDto> create(@Valid @RequestBody FavouriteDto favouriteDto,
                                                @PathVariable Long player_id,
                                                @PathVariable Long restaurant_id){
         try {

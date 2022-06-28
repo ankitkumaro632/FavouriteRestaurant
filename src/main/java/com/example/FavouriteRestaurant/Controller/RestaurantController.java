@@ -1,6 +1,5 @@
 package com.example.FavouriteRestaurant.Controller;
 
-import com.example.FavouriteRestaurant.Paylods.FavouriteDto;
 import com.example.FavouriteRestaurant.Paylods.RestaurantDto;
 import com.example.FavouriteRestaurant.Services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/restaurant")
@@ -18,7 +17,7 @@ public class RestaurantController {
 
     /* save a restaurant details */
     @PostMapping("/addRestaurant")
-    public ResponseEntity<RestaurantDto> createPlayer(@RequestBody RestaurantDto restaurantDto){
+    public ResponseEntity<RestaurantDto> createPlayer(@Valid @RequestBody RestaurantDto restaurantDto){
         try {
             RestaurantDto createRestaurantDto = this.restaurantService.createRestaurant(restaurantDto);
             return new ResponseEntity<>(createRestaurantDto, HttpStatus.CREATED);

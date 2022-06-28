@@ -32,16 +32,20 @@ public class Restaurant {
     private String r_state;
     private String r_country;
 
-    private String mondayTiming;
-    private String tuesdayTiming;
-    private String wednesdayTiming;
-    private String thursdayTiming;
-    private String fridayTiming;
-    private String saturdayTiming;
-    private String sundayTiming;
-
-    /*@ManyToOne
-    private Time time;*/
+    private String mondayOpeningTiming;
+    private String mondayClosingTiming;
+    private String tuesdayOpiningTiming;
+    private String tuesdayClosingTiming;
+    private String wednesdayOpiningTiming;
+    private String wednesdayClosingTiming;
+    private String thursdayOpiningTiming;
+    private String thursdayClosingTiming;
+    private String fridayOpiningTiming;
+    private String fridayClosingTiming;
+    private String saturdayOpiningTiming;
+    private String saturdayClosingTiming;
+    private String sundayOpeningTiming;
+    private String sundayClosingTiming;
 
     @OneToMany(mappedBy = "restaurant",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<FavouriteRestaurant> favouriteRestaurant = new ArrayList<>();

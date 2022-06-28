@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/player")
 public class PlayerController {
@@ -16,7 +18,7 @@ public class PlayerController {
 
     /* save the details of Player*/
     @PostMapping("/addPlayer")
-    public ResponseEntity<PlayerDto> createPlayer(@RequestBody PlayerDto playerDto){
+    public ResponseEntity<PlayerDto> createPlayer(@Valid @RequestBody PlayerDto playerDto){
         try {
             PlayerDto createPlayerDto = this.playerService.createPlayer(playerDto);
             return new ResponseEntity<>(createPlayerDto, HttpStatus.CREATED);

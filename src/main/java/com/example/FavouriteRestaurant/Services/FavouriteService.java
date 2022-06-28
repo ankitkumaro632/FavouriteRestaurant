@@ -1,6 +1,5 @@
 package com.example.FavouriteRestaurant.Services;
 
-import com.example.FavouriteRestaurant.Entity.FavouriteRestaurant;
 import com.example.FavouriteRestaurant.Paylods.FavouriteDto;
 
 import java.util.List;

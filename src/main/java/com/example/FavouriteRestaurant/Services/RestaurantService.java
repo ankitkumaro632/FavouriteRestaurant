@@ -2,7 +2,6 @@ package com.example.FavouriteRestaurant.Services;
 
 import com.example.FavouriteRestaurant.Paylods.RestaurantDto;
 
-import java.util.List;
 
 public interface RestaurantService {
 

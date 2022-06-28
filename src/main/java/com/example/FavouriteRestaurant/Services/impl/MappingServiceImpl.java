@@ -5,7 +5,6 @@ import com.example.FavouriteRestaurant.Entity.Player;
 import com.example.FavouriteRestaurant.Entity.Restaurant;
 import com.example.FavouriteRestaurant.Exception.ResourceNotFoundException;
 import com.example.FavouriteRestaurant.Paylods.MappingDto;
-import com.example.FavouriteRestaurant.Paylods.PlayerDto;
 import com.example.FavouriteRestaurant.Repoistries.MappingRepo;
 import com.example.FavouriteRestaurant.Repoistries.PlayerRepo;
 import com.example.FavouriteRestaurant.Repoistries.RestaurantRepo;

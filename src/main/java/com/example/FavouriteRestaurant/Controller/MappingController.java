@@ -1,7 +1,6 @@
 package com.example.FavouriteRestaurant.Controller;
 
 import com.example.FavouriteRestaurant.Paylods.MappingDto;
-import com.example.FavouriteRestaurant.Paylods.PlayerDto;
 import com.example.FavouriteRestaurant.Services.MappingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

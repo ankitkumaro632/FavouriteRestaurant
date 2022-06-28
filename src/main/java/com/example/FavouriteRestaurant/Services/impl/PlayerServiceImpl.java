@@ -1,7 +1,6 @@
 package com.example.FavouriteRestaurant.Services.impl;
 
 import com.example.FavouriteRestaurant.Entity.Player;
-import com.example.FavouriteRestaurant.Entity.Restaurant;
 import com.example.FavouriteRestaurant.Paylods.PlayerDto;
 import com.example.FavouriteRestaurant.Repoistries.PlayerRepo;
 import com.example.FavouriteRestaurant.Repoistries.RestaurantRepo;
@@ -9,9 +8,6 @@ import com.example.FavouriteRestaurant.Services.PlayerService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PlayerServiceImpl implements PlayerService {
@@ -44,8 +40,6 @@ public class PlayerServiceImpl implements PlayerService {
 
 
     /* create a method to change player to dto and dto to player */
-
-
 
     private Player dtoToPlayer(PlayerDto playerDto){
         Player player = this.modelMapper.map(playerDto,Player.class);
