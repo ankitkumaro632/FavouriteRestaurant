@@ -11,7 +11,6 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 public class FavouriteDto {
 
-    @NotEmpty
     private boolean favouriteRestaurant;
 
     private PlayerDto player;

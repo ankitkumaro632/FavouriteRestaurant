@@ -31,19 +31,33 @@ public class RestaurantDto {
     private String r_country;
 
     @NotEmpty
-    private String mondayTiming;
+    private String mondayOpeningTime;
     @NotEmpty
-    private String tuesdayTiming;
+    private String mondayClosingTime;
     @NotEmpty
-    private String wednesdayTiming;
+    private String tuesdayOpeningTime;
     @NotEmpty
-    private String thursdayTiming;
+    private String tuesdayClosingTime;
     @NotEmpty
-    private String fridayTiming;
+    private String wednesdayOpeningTime;
     @NotEmpty
-    private String saturdayTiming;
+    private String wednesdayClosingTime;
     @NotEmpty
-    private String sundayTiming;
+    private String thursdayOpeningTime;
+    @NotEmpty
+    private String thursdayClosingTime;
+    @NotEmpty
+    private String fridayOpeningTime;
+    @NotEmpty
+    private String fridayClosingTime;
+    @NotEmpty
+    private String saturdayOpeningTime;
+    @NotEmpty
+    private String saturdayClosingTime;
+    @NotEmpty
+    private String sundayOpeningTime;
+    @NotEmpty
+    private String sundayClosingTime;
 
 
 }
